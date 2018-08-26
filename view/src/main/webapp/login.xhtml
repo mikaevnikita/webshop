@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: user
+  Date: 25.08.2018
+  Time: 15:44
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+>
+
+<h:head>
+    <title>Login</title>
+</h:head>
+
+<h:body>
+    <p:dialog header="Введите учетные данные" visible="true" widgetVar="dlg" modal="true" closable="false">
+        <h:form>
+            <h:panelGrid>
+                <h:outputText value="Логин:"/>
+                <p:inputText value="#{authBean.username}"/>
+                <h:outputText value="Пароль:"/>
+                <p:inputText value="#{authBean.password}"/>
+                <p:commandButton value="Вход" action="#{authBean.doLogin}"/>
+            </h:panelGrid>
+        </h:form>
+
+    </p:dialog>
+</h:body>
+
+</html>

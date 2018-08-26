@@ -70,8 +70,8 @@
     <schema id="15" parent="2" name="public">
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
-      <IntrospectionTimestamp>2018-08-25.14:34:16.707</IntrospectionTimestamp>
-      <IntrospectionStateNumber>623</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-08-26.13:17:38.875</IntrospectionTimestamp>
+      <IntrospectionStateNumber>656</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -118,127 +118,204 @@
       <Type>index</Type>
     </access-method>
     <sequence id="22" parent="15" name="hibernate_sequence">
-      <ObjectId>24660</ObjectId>
-      <StateNumber>621</StateNumber>
+      <ObjectId>24733</ObjectId>
+      <StateNumber>653</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <table id="23" parent="15" name="ordertable">
-      <ObjectId>24642</ObjectId>
-      <StateNumber>622</StateNumber>
+    <table id="23" parent="15" name="credentials">
+      <ObjectId>24696</ObjectId>
+      <StateNumber>656</StateNumber>
     </table>
-    <table id="24" parent="15" name="product">
-      <ObjectId>24650</ObjectId>
-      <StateNumber>623</StateNumber>
+    <table id="24" parent="15" name="ordertable">
+      <ObjectId>24707</ObjectId>
+      <StateNumber>654</StateNumber>
     </table>
-    <table id="25" parent="15" name="productinorder">
-      <ObjectId>24655</ObjectId>
-      <StateNumber>623</StateNumber>
+    <table id="25" parent="15" name="product">
+      <ObjectId>24712</ObjectId>
+      <StateNumber>655</StateNumber>
     </table>
-    <column id="26" parent="23" name="id">
+    <table id="26" parent="15" name="productinorder">
+      <ObjectId>24717</ObjectId>
+      <StateNumber>655</StateNumber>
+    </table>
+    <table id="27" parent="15" name="usertable">
+      <ObjectId>24722</ObjectId>
+      <StateNumber>656</StateNumber>
+    </table>
+    <column id="28" parent="23" name="username">
+      <Position>1</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>646</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="29" parent="23" name="password">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>646</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="30" parent="23" name="credentials_pkey">
+      <ObjectId>24705</ObjectId>
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="31" parent="23" name="credentials_pkey">
+      <ObjectId>24706</ObjectId>
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>credentials_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="32" parent="24" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>617</StateNumber>
+      <StateNumber>648</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="27" parent="23" name="ordertable_pkey">
-      <ObjectId>24645</ObjectId>
+    <index id="33" parent="24" name="ordertable_pkey">
+      <ObjectId>24710</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="28" parent="23" name="ordertable_pkey">
-      <ObjectId>24646</ObjectId>
+    <key id="34" parent="24" name="ordertable_pkey">
+      <ObjectId>24711</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>ordertable_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="29" parent="24" name="id">
+    <column id="35" parent="25" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>619</StateNumber>
+      <StateNumber>649</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="30" parent="24" name="name">
+    <column id="36" parent="25" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>619</StateNumber>
+      <StateNumber>649</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="31" parent="24" name="price">
+    <column id="37" parent="25" name="price">
       <Position>3</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>619</StateNumber>
+      <StateNumber>649</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="32" parent="24" name="product_pkey">
-      <ObjectId>24653</ObjectId>
+    <index id="38" parent="25" name="product_pkey">
+      <ObjectId>24715</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="33" parent="24" name="product_pkey">
-      <ObjectId>24654</ObjectId>
+    <key id="39" parent="25" name="product_pkey">
+      <ObjectId>24716</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>product_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="34" parent="25" name="id">
+    <column id="40" parent="26" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>620</StateNumber>
+      <StateNumber>650</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="35" parent="25" name="quantity">
+    <column id="41" parent="26" name="quantity">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>620</StateNumber>
+      <StateNumber>650</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="36" parent="25" name="order_id">
+    <column id="42" parent="26" name="order_id">
       <Position>3</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>620</StateNumber>
+      <StateNumber>650</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="37" parent="25" name="product_id">
+    <column id="43" parent="26" name="product_id">
       <Position>4</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>620</StateNumber>
+      <StateNumber>650</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="38" parent="25" name="productinorder_pkey">
-      <ObjectId>24658</ObjectId>
+    <index id="44" parent="26" name="productinorder_pkey">
+      <ObjectId>24720</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="39" parent="25" name="productinorder_pkey">
-      <ObjectId>24659</ObjectId>
+    <key id="45" parent="26" name="productinorder_pkey">
+      <ObjectId>24721</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>productinorder_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="40" parent="25" name="fkjjxmmt9sqjm83lsu0l4movbd1">
-      <ObjectId>24662</ObjectId>
+    <foreign-key id="46" parent="26" name="fkjjxmmt9sqjm83lsu0l4movbd1">
+      <ObjectId>24735</ObjectId>
       <ColNames>order_id</ColNames>
-      <RefTableId>24642</RefTableId>
+      <RefTableId>24707</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>ordertable</RefTableName>
       <RefKeyName>ordertable_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="41" parent="25" name="fk58vbtxqgingsv440qlrvwxlv6">
-      <ObjectId>24667</ObjectId>
+    <foreign-key id="47" parent="26" name="fk58vbtxqgingsv440qlrvwxlv6">
+      <ObjectId>24740</ObjectId>
       <ColNames>product_id</ColNames>
-      <RefTableId>24650</RefTableId>
+      <RefTableId>24712</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>product</RefTableName>
       <RefKeyName>product_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="48" parent="27" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>651</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="49" parent="27" name="role">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>651</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="50" parent="27" name="username">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>651</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="51" parent="27" name="credentials_username">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>651</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="52" parent="27" name="usertable_pkey">
+      <ObjectId>24728</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="53" parent="27" name="usertable_pkey">
+      <ObjectId>24729</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>usertable_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="54" parent="27" name="fko4pp00fp97m126gm5802bmpi5">
+      <ObjectId>24745</ObjectId>
+      <ColNames>credentials_username</ColNames>
+      <RefTableId>24696</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>credentials</RefTableName>
+      <RefKeyName>credentials_pkey</RefKeyName>
+      <RefColNames>username</RefColNames>
     </foreign-key>
   </database-model>
 </dataSource>
