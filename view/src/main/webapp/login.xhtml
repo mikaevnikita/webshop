@@ -25,7 +25,7 @@
                 <h:outputText value="Логин:"/>
                 <p:inputText value="#{authBean.username}"/>
                 <h:outputText value="Пароль:"/>
-                <p:inputText value="#{authBean.password}"/>
+                <p:password value="#{authBean.password}"/>
                 <p:commandButton value="Вход" action="#{authBean.doLogin}"/>
             </h:panelGrid>
         </h:form>
